@@ -1,0 +1,6 @@
+{
+  "name": "Kaivora",
+  "description": "An AI-powered productivity companion featuring the AI Reminder Intelligence Engine, which intelligently schedules, progressive-reminds, and coaches users to complete tasks on time without notification fatigue.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,298 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-custom-bg: #F5F0EB;
+  --color-custom-sidebar: #1C1917;
+  --color-custom-cards: #FFFFFF;
+  --color-custom-card-sec: #F0EAE3;
+  --color-custom-sage: #7C9A8A;
+  --color-custom-sage-light: #A8C4B0;
+  --color-custom-rust: #C06B4A;
+  --color-custom-rust-light: #E8C4B4;
+  --color-custom-gold: #C9A96E;
+  --color-custom-dark-text: #1C1917;
+  --color-custom-mid-text: #5C524C;
+  --color-custom-soft-text: #9C8E86;
+  --color-custom-border: #E0D8D0;
+}
+
+.dark {
+  --color-custom-bg: #0F0E0D;
+  --color-custom-sidebar: #080807;
+  --color-custom-cards: #1A1916;
+  --color-custom-card-sec: #211F1C;
+  --color-custom-sage: #7C9A8A;
+  --color-custom-sage-light: #A8C4B0;
+  --color-custom-rust: #C06B4A;
+  --color-custom-rust-light: #E8C4B4;
+  --color-custom-gold: #C9A96E;
+  --color-custom-dark-text: #F0EBE4;
+  --color-custom-mid-text: #A89D94;
+  --color-custom-soft-text: #6B6158;
+  --color-custom-border: #2E2B27;
+}
+
+@theme {
+  --font-sans: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  
+  --color-custom-bg: var(--color-custom-bg);
+  --color-custom-sidebar: var(--color-custom-sidebar);
+  --color-custom-cards: var(--color-custom-cards);
+  --color-custom-card-sec: var(--color-custom-card-sec);
+  --color-custom-sage: var(--color-custom-sage);
+  --color-custom-sage-light: var(--color-custom-sage-light);
+  --color-custom-rust: var(--color-custom-rust);
+  --color-custom-rust-light: var(--color-custom-rust-light);
+  --color-custom-gold: var(--color-custom-gold);
+  --color-custom-dark-text: var(--color-custom-dark-text);
+  --color-custom-mid-text: var(--color-custom-mid-text);
+  --color-custom-soft-text: var(--color-custom-soft-text);
+  --color-custom-border: var(--color-custom-border);
+}
+
+/* Smooth transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, label, input, select, button, textarea {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode specific component adjustments */
+.dark .bg-white {
+  background-color: #1A1916 !important;
+}
+
+.dark input, .dark select, .dark textarea {
+  background-color: #1A1916 !important;
+  border-color: #2E2B27 !important;
+  color: #F0EBE4 !important;
+}
+
+.dark input::placeholder {
+  color: #6B6158 !important;
+}
+
+/* Badges glow effect in Hall of Legends */
+.dark .badge-earned-card, 
+.dark .flex-col.items-center.justify-center.border-2.border-\[\#C9A96E\]\/50 {
+  background: #1A1916 !important;
+  background-image: none !important;
+  border-color: #C9A96E80 !important;
+  box-shadow: 0 0 20px #C9A96E33 !important;
+}
+
+/* Sidebar logo glow */
+.dark #sidebar-logo {
+  text-shadow: 0 0 10px rgba(124, 154, 138, 0.4);
+}
+.dark #sidebar-logo span {
+  text-shadow: 0 0 15px rgba(124, 154, 138, 0.6);
+}
+
+/* Active navigation item soft sage glow */
+.dark .border-l-custom-sage {
+  box-shadow: inset 5px 0 15px -5px rgba(124, 154, 138, 0.3), 0 0 12px rgba(124, 154, 138, 0.15) !important;
+  background-color: #1E2E28 !important;
+}
+
+/* Cards hover subtle warm inner border glow */
+.dark .bg-white:hover,
+.dark #stat-card-3:hover,
+.dark #stat-card-2:hover,
+.dark #stat-card-1:hover,
+.dark .rounded-xl:hover,
+.dark .rounded-2xl:hover {
+  box-shadow: 0 0 0 1px #2E2B27 !important;
+}
+
+/* Stat Cards */
+.dark #stat-card-1 {
+  background-color: #7C9A8A !important;
+  color: #1C1917 !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+.dark #stat-card-1 span, .dark #stat-card-1 p {
+  color: #1C1917 !important;
+}
+
+.dark #stat-card-2 {
+  background-color: #1A2820 !important;
+  color: #F0EBE4 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+.dark #stat-card-2 span, .dark #stat-card-2 p {
+  color: #A8C4B0 !important;
+}
+.dark #stat-card-2 span.text-4xl {
+  color: #F0EBE4 !important;
+}
+
+.dark #stat-card-3 {
+  background-color: #1A1916 !important;
+  color: #F0EBE4 !important;
+  border-color: #2E2B27 !important;
+}
+.dark #stat-card-3 span {
+  color: #A89D94 !important;
+}
+.dark #stat-card-3 span.text-4xl {
+  color: #F0EBE4 !important;
+}
+.dark #stat-card-3 p {
+  color: #7C9A8A !important;
+}
+.dark #stat-card-3 p span {
+  color: #A89D94 !important;
+}
+
+/* Rescue banner */
+.dark #rescue-banner {
+  background-color: #1A0E0A !important;
+  border-color: #2E2B27 !important;
+  background-image: radial-gradient(circle at top right, rgba(192, 107, 74, 0.15), transparent 60%) !important;
+}
+.dark #rescue-banner h3, 
+.dark #rescue-banner h3 span,
+.dark #rescue-banner p {
+  color: #F0EBE4 !important;
+}
+.dark #rescue-banner p {
+  color: #A89D94 !important;
+}
+
+/* Schedule Timeline Line */
+.dark .border-custom-sage\/40 {
+  border-color: #2E2B27 !important;
+}
+
+/* AI Assistant Chat user and assistant bubble rules */
+.dark .bg-custom-sage\/10 {
+  background-color: #1E2E28 !important;
+  color: #F0EBE4 !important;
+  border-color: rgba(124, 154, 138, 0.3) !important;
+}
+
+/* Toast Notifications */
+.dark #toast-notification {
+  background-color: #211F1C !important;
+  color: #F0EBE4 !important;
+  border: 1px solid #2E2B27 !important;
+}
+.dark #toast-notification.bg-\[\#EBF7F0\] {
+  border-left: 4px solid #7C9A8A !important;
+}
+.dark #toast-notification.bg-\[\#FDF3EE\] {
+  border-left: 4px solid #C06B4A !important;
+}
+.dark #toast-notification.bg-\[\#FCF4F0\] {
+  border-left: 4px solid #C06B4A !important;
+}
+.dark #toast-notification.bg-\[\#FCF9F0\] {
+  border-left: 4px solid #C9A96E !important;
+  box-shadow: 0 0 15px rgba(201, 169, 110, 0.25) !important;
+}
+.dark #toast-notification.bg-white {
+  border-left: 4px solid #A89D94 !important;
+}
+
+/* Streak box */
+.dark #streak-box {
+  background-color: #0F0E0D !important;
+}
+.dark #streak-box span, .dark #streak-box div {
+  color: #C9A96E !important;
+}
+
+/* Voice Profile Gradients */
+.dark .from-white {
+  --tw-gradient-from: #1A1916 !important;
+  --tw-gradient-to: rgba(26, 25, 22, 0) !important;
+}
+.dark .to-custom-sage-light\/5 {
+  --tw-gradient-to: rgba(168, 196, 176, 0.05) !important;
+}
+.dark .to-custom-card-sec\/10 {
+  --tw-gradient-to: rgba(33, 31, 28, 0.1) !important;
+}
+
+/* Additional specific overrides */
+.dark .bg-\[\#FCFBF8\] {
+  background-color: #1A1916 !important;
+}
+.dark .bg-\[\#FAFAF9\]\/30 {
+  background-color: rgba(15, 14, 13, 0.3) !important;
+}
+.dark .bg-\[\#FAFAF9\] {
+  background-color: #1A1916 !important;
+}
+.dark .bg-\[\#FAF2EE\]\/50 {
+  background-color: rgba(33, 31, 28, 0.5) !important;
+}
+.dark .bg-custom-card-sec\/50 {
+  background-color: rgba(33, 31, 28, 0.5) !important;
+}
+.dark .bg-custom-card-sec\/70 {
+  background-color: rgba(33, 31, 28, 0.7) !important;
+}
+.dark .bg-custom-sage-light\/20 {
+  background-color: rgba(124, 154, 138, 0.2) !important;
+}
+.dark .bg-custom-rust-light\/5 {
+  background-color: rgba(192, 107, 74, 0.05) !important;
+}
+.dark .border-custom-rust-light\/20 {
+  border-color: rgba(192, 107, 74, 0.2) !important;
+}
+.dark .border-custom-border\/60 {
+  border-color: #2E2B27 !important;
+}
+.dark .bg-custom-card-sec\/10 {
+  background-color: rgba(33, 31, 28, 0.1) !important;
+}
+.dark .divide-custom-border\/60 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2E2B27 !important;
+}
+
+/* Confetti Fall Keyframes */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    translateX: 20px;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+.animate-confetti-fall {
+  animation: confetti-fall var(--confetti-duration, 3.5s) ease-in-out var(--confetti-delay, 0s) forwards;
+}
+
+/* Custom scrollbar for sidebar and other scrollable panels */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
