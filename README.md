@@ -2,7 +2,9 @@
 
 ### Built under VIBE2SHIP - Vibe Coding Hackathon by CodingNinjas & Google for Developers 
 
-View app in AI Studio: https://ai.studio/apps/8ec8c067-fcb5-4732-9bac-59f4a6354fa6
+View app :
+https://kaivora-125377089874.asia-southeast1.run.app/ 
+
 An AI-powered productivity companion that helps users manage tasks, build habits, protect focus, and maintain a healthy work-life balance.
 
 ## Features
